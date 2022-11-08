@@ -44,6 +44,10 @@ class AuthController extends Controller
      */
     public function me()
     {
+        /*if(Auth::user()->hasRole('usuario'))
+        {
+            return response()->json(['Eres tipo usuario normal']);
+        }*/
         return response()->json(auth()->user());
     }
 
@@ -101,6 +105,8 @@ class AuthController extends Controller
             $validator->validate(),
             ['password' => bcrypt($request->password)]
         ));
+
+        $user->assignRole('usuario');
 
         return response()->json([
             'message' => 'Usuario registrado correctamente!!',

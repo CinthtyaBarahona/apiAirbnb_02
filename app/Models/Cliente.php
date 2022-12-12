@@ -16,6 +16,7 @@ class Cliente extends Model
         'telefono',
         'correo',
         'direccion',
+        'user_id'
     ];
 
     public function User(){

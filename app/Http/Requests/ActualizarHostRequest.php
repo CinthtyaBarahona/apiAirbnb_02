@@ -25,8 +25,12 @@ class ActualizarHostRequest extends FormRequest
     {
         return [
             "nombre" => "required",
-            "descripcion" => "required", 
-            "estado" => "required"
+            "descripcion" => "required",
+            "urlfoto" => "required",
+            "urllogo" => "required", 
+            "estado" => "required",
+            "ruta_id" => "required",
+            "user_id" => "required"
         ];
     }
 }

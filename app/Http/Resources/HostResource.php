@@ -19,8 +19,11 @@ class HostResource extends JsonResource
             'id' => $this->id,
             'Nombre' => Str::of($this->nombre),
             'Descripcion' => $this->descripcion,
+            'URL de foto' => $this->urlfoto,
+            'url de logo' => $this->urllogo,
             'Estado' => $this->estado,
-            'URL de foto' => $this->urlfoto
+            'ruta' => $this->ruta_id,
+            'usuario' => $this->user_id
             /*'ingreso' => $this->created_at->format('d-m-Y'),
             'modificacion' => $this->updated_at->format('d-m-Y')*/
         ];

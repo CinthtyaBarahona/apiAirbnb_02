@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('lugares', function (Blueprint $table) {
             $table->id();
-            $table ->string('slug',100)->unique();
             $table ->string('nombre',100)->unique();
             $table ->text('descripcion');
             $table ->string('urlfoto',100)->default("foto.jpg");

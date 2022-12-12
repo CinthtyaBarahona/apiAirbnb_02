@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('rutas', function (Blueprint $table) {
             $table->id();
-            $table ->string('slug',100)->unique();
             $table ->string('nombre',100)->unique();
             $table->timestamps();
         });

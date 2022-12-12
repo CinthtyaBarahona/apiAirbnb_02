@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('reservas', function (Blueprint $table) {
             $table->id();
-            $table ->string('slug',100)->unique();
             $table ->date('checkin');
             $table ->date('checkout');
             $table ->boolean('estado')->default(0);

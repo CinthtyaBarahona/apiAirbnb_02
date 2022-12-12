@@ -10,7 +10,6 @@ class Host extends Model
     use HasFactory;
 
     protected $fillable = [
-        'slug',
         'nombre',
         'descripcion',
         'urlfoto',

@@ -11,8 +11,6 @@ class Ruta extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'slug',
         'nombre',
-        'descripcion'
     ];
 }

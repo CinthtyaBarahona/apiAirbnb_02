@@ -9,9 +9,7 @@ class Lugar extends Model
 {
     use HasFactory;
 
-    use HasFactory;
     protected $fillable = [
-        'slug',
         'nombre',
         'descripcion',
         'urlfoto',

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests\GuardarServLugaresRequest;
+use App\Http\Requests\GuardarServLugarRequest;
 use App\Http\Requests\ActualizarServLugaresRequest;
 use App\Http\Resources\ServLugaresResource;
 
@@ -53,7 +53,7 @@ class ServLugaresController extends Controller
             'cliente' => $cliente
         ], 200);*/
 
-        return new ServLugarResource($servlugar);
+        return new ServLugaresResource($servlugar);
     }
 
     /**
@@ -91,7 +91,9 @@ class ServLugaresController extends Controller
             'msg' => 'Cliente eliminado correctamente'
         ], 200);*/
         $servlugar->delete();
-        return (new ServLugarResource($servlugar))
-        ->additional(['msg' => 'Servicio por lugar eliminado correctamente']);;
+        return response()->json([
+            'data' => $servlugar,
+            'msg' => 'Eliminado'
+        ]);
     }
 }

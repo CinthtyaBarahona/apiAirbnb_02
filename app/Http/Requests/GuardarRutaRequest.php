@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ActualizarServLugarRequest extends FormRequest
+class GuardarRutaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,7 @@ class ActualizarServLugarRequest extends FormRequest
     public function rules()
     {
         return [
-            "lugare_id" => "required",
-            "servicio_id" => "required",
+            "nombre" => "required",
         ];
     }
 }

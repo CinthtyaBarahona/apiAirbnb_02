@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
-            $table ->string('slug',100)->unique();
             $table->string('nombre');
             $table->date('fechaNac');
             $table->string('dui',10)->unique();
